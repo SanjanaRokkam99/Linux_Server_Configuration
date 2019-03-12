@@ -273,6 +273,8 @@ After performing both enable and disable operations you have to restart apache2
 After executing above command re-execute your **database_setup.py** and **__init__.py** files and enter your IP address in your website.        
 # Reference
 My sincere thanks to the people who poster their step-by-step on their Github:
-https://github.com/chuanqin3/udacity-linux-configuration
+* https://github.com/chuanqin3/udacity-linux-configuration
 
-https://github.com/rrjoson/udacity-linux-server-configuration/blob/master/README.md
+* https://github.com/stueken/FSND-P5_Linux-Server-Configuration
+
+* https://github.com/rrjoson/udacity-linux-server-configuration/blob/master/README.md
