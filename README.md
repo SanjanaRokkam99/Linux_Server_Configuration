@@ -2,11 +2,11 @@
 This project about create a linux server and using it to host our web application
 
 # IP Address
-IP Address: 13.127.103.47
+IP Address: 13.234.119.192
 
 # Host Name
-Host Name: ec2-13-127-103-47.ap-south-1.compute.amazonaws.com
-
+Host Name: ec2-13-234-119-192.ap-south-1.compute.amazonaws.com
+ssh port:2200 
 # Amazon Lightsail server setup
 1. Open **Amazon Lightsail** website and create a account in it.
 2. After creating an account go to log in page.
@@ -87,7 +87,7 @@ then save it.(*Control X, then type Y, then hit enter key on your keyboard*)
         20. ~.
 18. Log into the server as grader
         
-        21. ssh -i ~/.ssh/udacity_key.rsa grader@13.127.103.47
+        21. ssh -i ~/.ssh/udacity_key.rsa grader@13.234.119.192
 19. We now need to enforce the key-based authentication:
         
         22. sudo nano /etc/ssh/sshd_config
@@ -105,7 +105,7 @@ Find the Port line and change 22 to 2200. Restart ssh:
         26. ~.
 and then log back through port 2200:
         
-        27. ssh -i ~/.ssh/udacity_key.rsa -p 2200 grader@13.127.103.47
+        27. ssh -i ~/.ssh/udacity_key.rsa -p 2200 grader@13.234.119.192
 22. Disable ssh login for root user, as required by Udacity:
         
         28. sudo nano /etc/ssh/sshd_config
@@ -207,7 +207,7 @@ paste the following code and save
         <VirtualHost *:80>
             ServerName [YOUR PUBLIC IP ADDRESS]
             ServerAlias [YOUR AMAZON LIGHTSAIL HOST NAME]
-            ServerAdmin admin@35.167.27.204
+            ServerAdmin admin@13.234.119.192
             WSGIDaemonProcess catalog python-path=/var/www/catalog:/var/www/catalog/venv/lib/python2.7/site-packages
             WSGIProcessGroup catalog
             WSGIScriptAlias / /var/www/catalog/catalog.wsgi
@@ -274,7 +274,5 @@ After executing above command re-execute your **database_setup.py** and **__init
 # Reference
 My sincere thanks to the people who poster their step-by-step on their Github:
 * https://github.com/chuanqin3/udacity-linux-configuration
-
 * https://github.com/stueken/FSND-P5_Linux-Server-Configuration
-
 * https://github.com/rrjoson/udacity-linux-server-configuration/blob/master/README.md
