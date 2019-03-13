@@ -6,7 +6,10 @@ IP Address: 13.234.119.192
 
 # Host Name
 Host Name: ec2-13-234-119-192.ap-south-1.compute.amazonaws.com
-ssh port:2200 
+
+# Port Number
+ssh port:2200
+
 # Amazon Lightsail server setup
 1. Open **Amazon Lightsail** website and create a account in it.
 2. After creating an account go to log in page.
